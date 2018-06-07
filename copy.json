@@ -1,0 +1,26 @@
+[
+    {
+        "fname": "Himanshu",
+        "lname": "Kumar",
+        "pass": "22222222",
+        "mail": "himanshu@gmail.com"
+    },
+    {
+        "fname": "Big",
+        "lname": "Chuck",
+        "pass": "3333333",
+        "mail": "bigchuck@gmail.com"
+    },
+    {
+        "fname": "Leo",
+        "lname": "caprio",
+        "pass": "44444444",
+        "mail": "leocap@g"
+    },
+    {
+        "fname": "Bat",
+        "lname": "Joker",
+        "pass": "5555555",
+        "mail": "joke@bat"
+    }
+]

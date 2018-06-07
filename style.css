@@ -1,0 +1,52 @@
+body {
+    background: rgb(231, 243, 163);
+    display: flex;
+    margin:auto;
+    flex-direction: column;   
+    font-family: 'comfortaa', cursive;
+}
+
+.navbar {
+    background: #222;
+    padding: 0px 10px;
+    color: rgb(238, 225, 225);
+    float: left;
+}
+
+.navbar ul li {
+    float: left;
+    list-style: none;
+    padding: 10px;
+    position: relative;
+}
+
+.navbar ul li a {
+    display: block;
+    font-size: 24px;
+    padding: 7px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: whitesmoke;
+    display: block; 
+    font-size: 26px;
+    color: black;
+    transition-delay: 100ms;
+}
+.myclass{
+    padding: 20px;
+}
+
+input.ng-valid{
+    background-color: rgb(91, 214, 91);
+
+}
+input.ng-invalid{
+     background-color: rgb(202, 160, 160);
+     
+}
+span{
+    color:darkred;
+}

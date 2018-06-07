@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> <!--used a google font-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="new.js"></script>
+    <title>Form</title>
+</head>
+<body ng-app="first">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#">About</a></li>
+        </ul>      
+    </nav>
+    <div class="myclass" ng-controller="mycont">
+        <form name="signupform" method="post" novalidate>
+            First Name:
+            <br>
+            <input type="text" name="fname" placeholder="enter first name..." ng-model="user.fname" required> {{ user.fname }}
+            <!-- binding using ng-model-->
+            <span ng-show="signupform.fname.$dirty && signupform.fname.$invalid">
+            <span ng-show="signupform.fname.$error.required">firstname is required !</span>
+            </span>
+            <br><br> 
+            Last Name:
+            <br>
+            <input type="text" name="lname" placeholder="enter last name..." ng-model="user.lname" required> {{ user.lname }}
+            <span ng-show="signupform.lname.$dirty && signupform.lname.$invalid">
+            <span ng-show="signupform.lname.$error.required">lastname is required !</span>
+            </span>
+            <br><br>
+            Password:
+            <br>
+            <input type="Password" name="pass" ng-model="user.pass" placeholder="enter password..." required
+              ng-minlength="6" ng-maxlength="12">
+              <span ng-show="signupform.pass.$dirty && signupform.pass.$error.required"> Password is required !</span>
+              <span ng-show="signupform.pass.$error.minlength"> Password is too small !</span>
+              <span ng-show="signupform.pass.$error.maxlength"> Password is too large !</span>
+            <br><br>
+            E-mail:
+            <br>
+            <input type="email" name="email" ng-model="user.email" placeholder="enter email id..." required/>
+            <span ng-show="signupform.email.$dirty && signupform.email.$invalid">Enter a valid E-mail !</span>
+            <br><br>
+            <input type="submit" name="submit" 
+            ng-disabled="signupform.fname.$dirty && signupform.fname.$invalid || signupform.lname.$dirty && signupform.lname.$invalid || 
+            signupform.email.$invalid || signupform.pass.$error.required || signupform.pass.$error.minlength 
+             || signupform.pass.$error.maxlength" required>
+        </form>
+    </div>
+</body>
+</html>
